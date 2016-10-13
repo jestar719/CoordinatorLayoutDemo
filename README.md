@@ -52,7 +52,30 @@
 父组件使用`V4`包中的`NestedScrollingParentHelper`处理.
 
 ##### `CoordinatorLayout`的作用及原理
+`CoordinatorLayout`是`ViewGroup`的子类,实现了`NestedScrollingParent`,所以官方建议做为根布局来统筹其子类的嵌套滑动.
+* 工作原理.
+    * `layout_behavior`属性是记录在`CoordinatorLayout.layoutParams`里的.通过读取此属性.为`ScrollAble`组件与其响应的组件进行配对.
+    *  `CoordinatorLayout`,把`ScrollAble`传递的滑动距离交给对应的组件的`Behavior`进行消费,然后`ScrollAble`自身进行消费.其起到一个桥梁的作用
+
 ##### `Behavior`的作用及原理
+`Behavior`是一个View的触摸事件相关的的代理.基与观察者模式,通过观察目标View的滑动.来改变与之绑定的View
+
+`Behavior`的基类是`CoordinatorLayout.Behavior<V extends View>`,为一个抽象类
+* 其实现了`NestedScrollingParent`,所以可以接收目标组件做为`NestedScrollingChild`发起的回调.
+* `   public boolean layoutDependsOn(CoordinatorLayout parent, V child, View dependency)`
+
+    此方法用来配对目标(被观察的)View及响应的View.`Behavior`,设置方法如下
+    * 在xml中使用`app:layout_behavior`
+    * 在代码中设置,`new`出`Behavior`,设置在`CoordinatorLayout.layoutParams`中
+    * 在类中使用注解,如`@CoordinatorLayout.DefaultBehavior(AppBarLayout.Behavior.class)`,括号中就是需要绑定的`Behavior`
+
+        使用此方法`CoordinatorLayout`会在`inflater`中能过反射生成对应的`Behavior`,并设置在`layoutParams`中
+
+
+
+
+
+
 ##### `AppBarLayout`的作用及原理
 `AppBarLayout`是`LinearLayout`的子类,方向强制为`vertical`
 
