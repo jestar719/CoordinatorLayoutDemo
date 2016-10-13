@@ -1,7 +1,7 @@
 # CoordinatorLayout的演示Demo
 
 ### 基础知识
-##### 嵌套滑动机制`NestedScrolling`
+#### 嵌套滑动机制`NestedScrolling`
 嵌套滑动机制,是指在滑动一个可滑动`scrollAble`的组件时,同时让响应其滑动的其它组件也进行滑动,同时根据滑动的方向和距离动态改变自身及其它组件的尺寸.
 嵌套滑动机制是对**触摸事件分发机制**的一个补充.原来在子组件获得处理触摸事件时,直到手指再次按下,期间父组件是无处理触摸事件的(使用事件拦截除外),
 `NestedScrolling`是在安卓5.0之后提供的.放在`V4`包里.相关接口如下
@@ -51,18 +51,18 @@
 在方法中使用`V4`包中`NestedScrollingChildHelper`工具类来调用父组件的相关回调
 父组件使用`V4`包中的`NestedScrollingParentHelper`处理.
 
-##### `CoordinatorLayout`的作用及原理
+#### `CoordinatorLayout`的作用及原理
 `CoordinatorLayout`是`ViewGroup`的子类,实现了`NestedScrollingParent`,所以官方建议做为根布局来统筹其子类的嵌套滑动.
 * 工作原理.
     * `layout_behavior`属性是记录在`CoordinatorLayout.layoutParams`里的.通过读取此属性.为`ScrollAble`组件与其响应的组件进行配对.
     *  `CoordinatorLayout`,把`ScrollAble`传递的滑动距离交给对应的组件的`Behavior`进行消费,然后`ScrollAble`自身进行消费.其起到一个桥梁的作用
 
-##### `Behavior`的作用及原理
+#### `Behavior`的作用及原理
 `Behavior`是一个View的触摸事件相关的的代理.基与观察者模式,通过观察目标View的滑动.来改变与之绑定的View
 
 `Behavior`的基类是`CoordinatorLayout.Behavior<V extends View>`,为一个抽象类
 * 其实现了`NestedScrollingParent`,所以可以接收目标组件做为`NestedScrollingChild`发起的回调.
-* `   public boolean layoutDependsOn(CoordinatorLayout parent, V child, View dependency)`
+* `public boolean layoutDependsOn(CoordinatorLayout parent, V child, View dependency)`
 
     此方法用来配对目标(被观察的)View及响应的View.`Behavior`,设置方法如下
     * 在xml中使用`app:layout_behavior`
@@ -70,13 +70,10 @@
     * 在类中使用注解,如`@CoordinatorLayout.DefaultBehavior(AppBarLayout.Behavior.class)`,括号中就是需要绑定的`Behavior`
 
         使用此方法`CoordinatorLayout`会在`inflater`中能过反射生成对应的`Behavior`,并设置在`layoutParams`中
+* `public boolean onDependentViewChanged(CoordinatorLayout parent, V child, View dependency)`
 
-
-
-
-
-
-##### `AppBarLayout`的作用及原理
+    当目标组件发生变化时的回调
+#### `AppBarLayout`的作用及原理
 `AppBarLayout`是`LinearLayout`的子类,方向强制为`vertical`
 
 `AppBarLayout.Behavior`是`AppBarLayout`的内部类.
@@ -87,7 +84,7 @@
 
 对标注了`@string/appbar_scrolling_view_behavior`组件的滑动进行响应,控制其标了`app:layout_scrollFlags="scroll"`的直接子类进行嵌套滑动.
 ### Demo说明
-##### `AppBarLayout`的使用及细节
+#### `AppBarLayout`的使用及细节
 * 只能控制直接子类进行嵌套滑动
 * include的view.`layout_scollFlags`属性必须标注在原xml的根组件上
 * 夹在两个不`scroll`的组件之间的组件,`layout_scrollFlags`属性无效
