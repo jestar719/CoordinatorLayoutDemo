@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll"
+            >
+
+            <include
+                layout="@layout/layout_title"
+                />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_vertical"
+            android:text="@string/ext1"
+            android:textColor="@android:color/white"
+            app:layout_scrollFlags="scroll|snap"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            >
+
+            <include
+                layout="@layout/layout_tab_layout"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:textColor="@android:color/white"
+                android:text="@string/not_direct_child"
+                android:gravity="center_vertical"
+                />
+        </FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:textColor="@android:color/white"
+            android:text="@string/between_not_scroll"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_vertical"
+            />
+        <include
+            layout="@layout/layout_tab_layout"
+            app:layout_scrollFlags="scroll|enterAlways"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>

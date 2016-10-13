@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">CoodinatorLayoutDemo</string>
+    <string name="ext1">从上至下是不同的scroll模式组合.</string>
+    <string name="not_direct_child">非AppBarLayout直接子View,scroll_flag无效</string>
+    <string name="between_not_scroll">夹在两个不滚动的组件之间,scroll_flag无效</string>
+    <string-array name="main_menu">
+        <item>官方样例1</item>
+        <item>官方样例1扩展</item>
+        <item>官方样例2</item>
+    </string-array>
 </resources>
