@@ -8,4 +8,6 @@
     <dimen name="dp_2">2dp</dimen>
     <dimen name="dp_256">256dp</dimen>
     <dimen name="dp_56">56dp</dimen>
+    <dimen name="dp_128">128dp</dimen>
+    <dimen name="dp_192">192dp</dimen>
 </resources>

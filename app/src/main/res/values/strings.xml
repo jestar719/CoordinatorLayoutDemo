@@ -9,6 +9,7 @@
     <string name="behavior_dependency">被观察的View</string>
     <string name="custom_simple_behavior">.CustomSimpleBehavior</string>
     <string name="text_hint_search">搜索</string>
+    <string name="i_am_image_roller">我是轮播图</string>
     <string-array name="main_menu">
         <item>官方样例1</item>
         <item>官方样例1扩展</item>
@@ -16,6 +17,7 @@
         <item>官方样例3</item>
         <item>官方样例3扩展</item>
         <item>官方样例3扩展1</item>
+        <item>自定义中间折叠</item>
         <item>自定义简单Behavior</item>
         <item>自定义简单Behavior1</item>
     </string-array>

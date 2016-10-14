@@ -8,6 +8,7 @@ import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample1ExtActivity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample2Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample3Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample3Ext1Activity;
+import cn.jestar.coodinatorlayoutdemo.activity.CustomCollapsingToCenterActivity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample3ExtActivity;
 
 /**
@@ -22,6 +23,7 @@ public interface AppConfig {
             OfficialSample3Activity.class,
             OfficialSample3ExtActivity.class,
             OfficialSample3Ext1Activity.class,
+            CustomCollapsingToCenterActivity.class,
             CustomSimpleBehaviorActivity.class,
             CustomSimpleBehavior1Activity.class
     };
