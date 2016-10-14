@@ -1,11 +1,10 @@
-package cn.jestar.coodinatorlayoutdemo.customBehaviorSample;
+package cn.jestar.coodinatorlayoutdemo.activity;
 
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
 import butterknife.BindView;
-import cn.jestar.coodinatorlayoutdemo.BaseCustomTitleActivity;
 import cn.jestar.coodinatorlayoutdemo.R;
 
 /**

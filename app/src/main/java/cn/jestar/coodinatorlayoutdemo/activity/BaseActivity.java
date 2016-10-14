@@ -1,4 +1,4 @@
-package cn.jestar.coodinatorlayoutdemo;
+package cn.jestar.coodinatorlayoutdemo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.text.TextUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.jestar.coodinatorlayoutdemo.R;
 
 /**
  * 基类

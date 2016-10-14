@@ -1,4 +1,6 @@
-package cn.jestar.coodinatorlayoutdemo;
+package cn.jestar.coodinatorlayoutdemo.activity;
+
+import cn.jestar.coodinatorlayoutdemo.R;
 
 /**
  * 官方样例1扩展

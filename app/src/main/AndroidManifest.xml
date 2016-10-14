@@ -15,12 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".OfficialSample1Activity"/>
-        <activity android:name=".OfficialSample1ExtActivity"/>
-        <activity android:name=".OfficialSample2Activity"/>
-        <activity android:name=".OfficialSample3Activity"/>
-        <activity android:name=".OfficialSample3ExtActivity"/>
-        <activity android:name=".customBehaviorSample.CustomSimpleBehaviorActivity"/>
+        <activity android:name=".activity.OfficialSample1Activity"/>
+        <activity android:name=".activity.OfficialSample1ExtActivity"/>
+        <activity android:name=".activity.OfficialSample2Activity"/>
+        <activity android:name=".activity.OfficialSample3Activity"/>
+        <activity android:name=".activity.OfficialSample3ExtActivity"/>
+        <activity android:name=".activity.CustomSimpleBehaviorActivity"/>
     </application>
 
 </manifest>

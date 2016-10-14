@@ -7,6 +7,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import butterknife.BindView;
+import cn.jestar.coodinatorlayoutdemo.activity.BaseActivity;
+import cn.jestar.coodinatorlayoutdemo.activity.BaseCustomTitleActivity;
 
 public class MainActivity extends BaseCustomTitleActivity {
 

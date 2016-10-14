@@ -1,10 +1,11 @@
-package cn.jestar.coodinatorlayoutdemo;
+package cn.jestar.coodinatorlayoutdemo.activity;
 
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TabLayout;
 
 import butterknife.BindView;
+import cn.jestar.coodinatorlayoutdemo.R;
 
 /**
  * 官方样例3,视差模式

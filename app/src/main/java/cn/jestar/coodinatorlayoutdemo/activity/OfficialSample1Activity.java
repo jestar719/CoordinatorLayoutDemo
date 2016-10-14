@@ -1,9 +1,10 @@
-package cn.jestar.coodinatorlayoutdemo;
+package cn.jestar.coodinatorlayoutdemo.activity;
 
 import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 
 import butterknife.BindView;
+import cn.jestar.coodinatorlayoutdemo.R;
 
 /**
  * 官方样例1

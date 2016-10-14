@@ -1,10 +1,11 @@
-package cn.jestar.coodinatorlayoutdemo;
+package cn.jestar.coodinatorlayoutdemo.activity;
 
 import android.support.annotation.CallSuper;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import butterknife.BindView;
+import cn.jestar.coodinatorlayoutdemo.R;
 
 /**
  * 官方样例演示1

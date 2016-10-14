@@ -1,9 +1,10 @@
-package cn.jestar.coodinatorlayoutdemo;
+package cn.jestar.coodinatorlayoutdemo.activity;
 
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import cn.jestar.coodinatorlayoutdemo.R;
 
 /**
  * 自定义标题栏的基类
