@@ -1,6 +1,6 @@
 package cn.jestar.coodinatorlayoutdemo;
 
-import android.support.design.widget.TabLayout;
+import android.support.annotation.CallSuper;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
@@ -20,6 +20,7 @@ public abstract class BaseToolbarActivity extends BaseActivity {
         mToolbar.setTitle(stringExtra);
     }
 
+    @CallSuper
     @Override
     protected void init() {
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {

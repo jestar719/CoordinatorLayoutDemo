@@ -6,7 +6,8 @@ package cn.jestar.coodinatorlayoutdemo;
 public class OfficialSample2Activity  extends BaseToolbarActivity{
     @Override
     protected void init() {
-
+        super.init();
+       initRecyclerView();
     }
 
     @Override

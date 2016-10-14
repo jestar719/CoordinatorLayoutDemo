@@ -6,6 +6,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
+ * 自定义标题栏的基类
  * Created by jestar on 16/10/13.
  */
 public abstract class BaseCustomTitleActivity extends BaseActivity {
