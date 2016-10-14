@@ -9,10 +9,13 @@
         android:layout_height="wrap_content">
 
         <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:collapsedTitleTextAppearance="@color/colorAccent"
+            android:layout_height="wrap_content"
             app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="center_horizontal"
+            app:collapsedTitleGravity="center_horizontal"
+            app:collapsedTitleTextAppearance="@color/colorAccent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
             <ImageView
                 android:layout_width="match_parent"
@@ -31,6 +34,17 @@
                 app:titleTextColor="@color/colorAccent"
                 />
         </android.support.design.widget.CollapsingToolbarLayout>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            app:tabMode="fixed"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:tabIndicatorColor="@android:color/holo_red_light"
+            app:tabSelectedTextColor="@android:color/holo_red_light"
+            app:tabTextColor="@color/colorAccent"
+            />
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/layout_recycler"/>

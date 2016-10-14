@@ -8,6 +8,7 @@ public interface AppConfig {
             OfficialSample1Activity.class,
             OfficialSample1ExtActivity.class,
             OfficialSample2Activity.class,
-            OfficialSample3Activity.class
+            OfficialSample3Activity.class,
+            OfficialSample3ExtActivity.class
     };
 }

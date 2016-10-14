@@ -19,6 +19,7 @@
         <activity android:name=".OfficialSample1ExtActivity"/>
         <activity android:name=".OfficialSample2Activity"/>
         <activity android:name=".OfficialSample3Activity"/>
+        <activity android:name=".OfficialSample3ExtActivity"/>
     </application>
 
 </manifest>
