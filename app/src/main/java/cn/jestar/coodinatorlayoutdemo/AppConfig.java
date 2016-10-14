@@ -7,5 +7,7 @@ public interface AppConfig {
     Class<? extends BaseActivity>[] ACTIVITYS = new Class[]{
             OfficialSample1Activity.class,
             OfficialSample1ExtActivity.class,
-            OfficialSample2Activity.class};
+            OfficialSample2Activity.class,
+            OfficialSample3Activity.class
+    };
 }

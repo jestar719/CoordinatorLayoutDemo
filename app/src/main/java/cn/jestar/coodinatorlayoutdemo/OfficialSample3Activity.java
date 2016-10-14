@@ -1,10 +1,10 @@
 package cn.jestar.coodinatorlayoutdemo;
 
 /**
- * 官方样例2,CollapsingToolbarLayout的初步使用
+ * 官方样例3,视差模式
  * Created by jestar on 16/10/13.
  */
-public class OfficialSample2Activity  extends BaseToolbarActivity{
+public class OfficialSample3Activity extends BaseToolbarActivity{
     @Override
     protected void init() {
         super.init();
@@ -13,6 +13,6 @@ public class OfficialSample2Activity  extends BaseToolbarActivity{
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_official_sample2;
+        return R.layout.activity_official_sample3;
     }
 }
