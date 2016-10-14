@@ -3,7 +3,9 @@
 ### 基础知识
 #### 嵌套滑动机制`NestedScrolling`
 嵌套滑动机制,是指在滑动一个可滑动`scrollAble`的组件时,同时让响应其滑动的其它组件也进行滑动,同时根据滑动的方向和距离动态改变自身及其它组件的尺寸.
+
 嵌套滑动机制是对**触摸事件分发机制**的一个补充.原来在子组件获得处理触摸事件时,直到手指再次按下,期间父组件是无处理触摸事件的(使用事件拦截除外),
+
 `NestedScrolling`是在安卓5.0之后提供的.放在`V4`包里.相关接口如下
 * `NestedScrollingChild`
 * `NestedScrollingParent`
@@ -11,7 +13,8 @@
 * `NestedScrollingParentHelper`
 
 在`21.0.0`版之后的`V7,V4`包中,`RecyclerView`,`SwipRefreshLayout`和`NestedScrollingView`默认实现了接口,支持`NestedScrolling`机制
-另外还有个`ViewParentCompact`工具类提供一些方法,用与兼容性操作
+
+另外还有ViewParentCompact`工具类提供一些方法,用与兼容性操作
 
 * 嵌套滑动机制的原理
 
@@ -51,20 +54,18 @@
 在方法中使用`V4`包中`NestedScrollingChildHelper`工具类来调用父组件的相关回调
 父组件使用`V4`包中的`NestedScrollingParentHelper`处理.
 
-#### `CoordinatorLayout`的作用及原理
-`CoordinatorLayout`是`ViewGroup`的子类,实现了`NestedScrollingParent`,所以官方建议做为根布局来统筹其子类的嵌套滑动.
-* 工作原理.
-    * `layout_behavior`属性是记录在`CoordinatorLayout.layoutParams`里的.通过读取此属性.为`ScrollAble`组件与其响应的组件进行配对.
-    *  `CoordinatorLayout`,把`ScrollAble`传递的滑动距离交给对应的组件的`Behavior`进行消费,然后`ScrollAble`自身进行消费.其起到一个桥梁的作用
-
 #### `Behavior`的作用及原理
-`Behavior`是一个View的触摸事件相关的的代理.基与观察者模式,通过观察目标View的滑动.来改变与之绑定的View
+`Behavior`是一个View的触摸事件相关的的代理.拦截`child`的触摸事件.
 
-`Behavior`的基类是`CoordinatorLayout.Behavior<V extends View>`,为一个抽象类
-* 其实现了`NestedScrollingParent`,所以可以接收目标组件做为`NestedScrollingChild`发起的回调.
+`Behavior`基与观察者模式,通过观察目标改变.来改变对应的`child`(不仅仅是嵌套滑动)
+
+`Behavior`的基类是`CoordinatorLayout.Behavior<V extends View>`,所有方法都是非抽象的空实现.可以看做是一个接口的默认实现类
+*
 * `public boolean layoutDependsOn(CoordinatorLayout parent, V child, View dependency)`
 
-    此方法用来配对目标(被观察的)View及响应的View.`Behavior`,设置方法如下
+    此方法用来配对被观察的View(`dependency`)及响应的View(`child`).如果返回true表示配对成功
+
+    `Behavior`,设置方法如下
     * 在xml中使用`app:layout_behavior`
     * 在代码中设置,`new`出`Behavior`,设置在`CoordinatorLayout.layoutParams`中
     * 在类中使用注解,如`@CoordinatorLayout.DefaultBehavior(AppBarLayout.Behavior.class)`,括号中就是需要绑定的`Behavior`
@@ -72,7 +73,14 @@
         使用此方法`CoordinatorLayout`会在`inflater`中能过反射生成对应的`Behavior`,并设置在`layoutParams`中
 * `public boolean onDependentViewChanged(CoordinatorLayout parent, V child, View dependency)`
 
-    当目标组件发生变化时的回调
+    当目标组件`dependency`发生变化时的回调
+
+#### `CoordinatorLayout`的作用及原理
+`CoordinatorLayout`是`ViewGroup`的子类,实现了`NestedScrollingParent`,所以官方建议做为根布局来统筹其子类的嵌套滑动.
+* 工作原理.
+    * `layout_behavior`属性是记录在`CoordinatorLayout.layoutParams`里的.`CoordinatorLayout`从中获取`Behavior`,再把直接子组件拿来与之配对.
+    *  `CoordinatorLayout`,把目标组件传递的滑动距离交给对应的组件的`Behavior`进行消费,然后`ScrollAble`自身进行消费.其起到一个桥梁的作用
+
 #### `AppBarLayout`的作用及原理
 `AppBarLayout`是`LinearLayout`的子类,方向强制为`vertical`
 
