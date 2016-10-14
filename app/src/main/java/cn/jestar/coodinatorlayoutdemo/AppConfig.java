@@ -1,6 +1,7 @@
 package cn.jestar.coodinatorlayoutdemo;
 
 import cn.jestar.coodinatorlayoutdemo.activity.BaseActivity;
+import cn.jestar.coodinatorlayoutdemo.activity.CustomSimpleBehavior1Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.CustomSimpleBehaviorActivity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample1Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample1ExtActivity;
@@ -18,7 +19,7 @@ public interface AppConfig {
             OfficialSample2Activity.class,
             OfficialSample3Activity.class,
             OfficialSample3ExtActivity.class,
-            CustomSimpleBehaviorActivity.class
-
+            CustomSimpleBehaviorActivity.class,
+            CustomSimpleBehavior1Activity.class
     };
 }

@@ -12,6 +12,9 @@ import android.widget.TextView;
  * Created by jestar on 16/10/14.
  */
 public class CustomSimpleBehavior extends CoordinatorLayout.Behavior<TextView> {
+    public CustomSimpleBehavior() {
+    }
+
     public CustomSimpleBehavior(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
@@ -24,7 +27,7 @@ public class CustomSimpleBehavior extends CoordinatorLayout.Behavior<TextView> {
     @Override
     public boolean onDependentViewChanged(CoordinatorLayout parent, TextView child, View dependency) {
         child.setX(dependency.getX());
-        child.setY(dependency.getY()+200);
+        child.setY(dependency.getY()+dependency.getHeight()+10);
         return false;
     }
 }
