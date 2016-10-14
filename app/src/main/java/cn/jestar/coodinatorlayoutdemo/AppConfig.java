@@ -1,5 +1,7 @@
 package cn.jestar.coodinatorlayoutdemo;
 
+import cn.jestar.coodinatorlayoutdemo.customBehaviorSample.CustomSimpleBehaviorActivity;
+
 /**
  * Created by jestar on 16/10/13.
  */
@@ -9,6 +11,8 @@ public interface AppConfig {
             OfficialSample1ExtActivity.class,
             OfficialSample2Activity.class,
             OfficialSample3Activity.class,
-            OfficialSample3ExtActivity.class
+            OfficialSample3ExtActivity.class,
+            CustomSimpleBehaviorActivity.class
+
     };
 }

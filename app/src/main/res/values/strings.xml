@@ -5,11 +5,15 @@
     <string name="between_not_scroll">夹在两个不滚动的组件之间,scroll_flag无效</string>
     <string name="exit_unit_collapsed">exitUnitCollapsed</string>
     <string name="enter_unit_collapsed">enterUnitCollapsed</string>
+    <string name="behavior_child">Behavoir控制的View</string>
+    <string name="behavior_dependency">被观察的View</string>
+    <string name="custom_simple_behavior">.CustomSimpleBehavior</string>
     <string-array name="main_menu">
         <item>官方样例1</item>
         <item>官方样例1扩展</item>
         <item>官方样例2</item>
         <item>官方样例3</item>
         <item>官方样例3扩展</item>
+        <item>自定义简单Behavior</item>
     </string-array>
 </resources>
