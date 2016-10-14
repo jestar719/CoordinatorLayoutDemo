@@ -4,17 +4,24 @@
     <string name="not_direct_child">非AppBarLayout直接子View,scroll_flag无效</string>
     <string name="between_not_scroll">夹在两个不滚动的组件之间,scroll_flag无效</string>
     <string name="exit_unit_collapsed">exitUnitCollapsed</string>
-    <string name="enter_unit_collapsed">enterUnitCollapsed</string>
-    <string name="behavior_child">Behavoir控制的View</string>
+    <string name="enter_unit_collapsed">enterAlwaysCollapsed</string>
+    <string name="behavior_child">Behavior控制的View</string>
     <string name="behavior_dependency">被观察的View</string>
     <string name="custom_simple_behavior">.CustomSimpleBehavior</string>
+    <string name="text_hint_search">搜索</string>
     <string-array name="main_menu">
         <item>官方样例1</item>
         <item>官方样例1扩展</item>
         <item>官方样例2</item>
         <item>官方样例3</item>
         <item>官方样例3扩展</item>
+        <item>官方样例3扩展1</item>
         <item>自定义简单Behavior</item>
         <item>自定义简单Behavior1</item>
+    </string-array>
+    <string-array name="tab_item">
+        <item>Tab1</item>
+        <item>Tab2</item>
+        <item>Tab3</item>
     </string-array>
 </resources>

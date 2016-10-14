@@ -20,6 +20,7 @@
         <activity android:name=".activity.OfficialSample2Activity"/>
         <activity android:name=".activity.OfficialSample3Activity"/>
         <activity android:name=".activity.OfficialSample3ExtActivity"/>
+        <activity android:name=".activity.OfficialSample3Ext1Activity"/>
         <activity android:name=".activity.CustomSimpleBehaviorActivity"/>
         <activity android:name=".activity.CustomSimpleBehavior1Activity"/>
     </application>

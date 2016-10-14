@@ -9,6 +9,7 @@ import cn.jestar.coodinatorlayoutdemo.R;
 
 /**
  * 自定义简单的Behavior演示
+ * 在xml中添加自定义Behavior
  * Created by jestar on 16/10/14.
  */
 

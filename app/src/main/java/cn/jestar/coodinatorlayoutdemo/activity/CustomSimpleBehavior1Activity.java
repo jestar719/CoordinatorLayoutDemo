@@ -9,6 +9,7 @@ import cn.jestar.coodinatorlayoutdemo.R;
 
 /**
  * 自定义简单的Behavior演示
+ * 演示了在View上使用注解添加Behavior
  * Created by jestar on 16/10/14.
  */
 

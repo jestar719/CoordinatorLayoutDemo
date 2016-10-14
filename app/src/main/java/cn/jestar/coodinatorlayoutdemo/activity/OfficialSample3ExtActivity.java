@@ -8,7 +8,8 @@ import butterknife.BindView;
 import cn.jestar.coodinatorlayoutdemo.R;
 
 /**
- * 官方样例3,视差模式
+ * 官方样例3扩展
+ * 切换layout_scrollFlags,演示exitUnitCollapsed和enterAlwaysCollapsed的不同
  * Created by jestar on 16/10/13.
  */
 public class OfficialSample3ExtActivity extends BaseToolbarActivity{

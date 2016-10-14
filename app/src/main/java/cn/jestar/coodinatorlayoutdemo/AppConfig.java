@@ -7,9 +7,11 @@ import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample1Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample1ExtActivity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample2Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample3Activity;
+import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample3Ext1Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample3ExtActivity;
 
 /**
+ * 常量
  * Created by jestar on 16/10/13.
  */
 public interface AppConfig {
@@ -19,7 +21,9 @@ public interface AppConfig {
             OfficialSample2Activity.class,
             OfficialSample3Activity.class,
             OfficialSample3ExtActivity.class,
+            OfficialSample3Ext1Activity.class,
             CustomSimpleBehaviorActivity.class,
             CustomSimpleBehavior1Activity.class
     };
+    int[] IMAGES = {R.drawable.meinu,R.drawable.meinu,R.drawable.meinu};
 }

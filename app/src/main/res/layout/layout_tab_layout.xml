@@ -8,8 +8,7 @@
     app:tabMode="fixed"
     app:tabSelectedTextColor="@color/colorAccent"
     app:tabIndicatorColor="@android:color/holo_red_light"
-    android:background="@color/colorPrimaryHardDark"
-    tools:showIn="@layout/activity_official_sample1">
+    android:background="@color/colorPrimaryHardDark" >
 
     <android.support.design.widget.TabItem
         android:text="Tab1"

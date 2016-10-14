@@ -12,6 +12,7 @@ import android.text.TextUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.jestar.coodinatorlayoutdemo.R;
+import cn.jestar.coodinatorlayoutdemo.view.AdapterFactory;
 
 /**
  * 基类
@@ -48,7 +49,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 初始化RecyclerView
      */
     protected void initRecyclerView() {
-        RecyclerView.Adapter<RecyclerAdapterFactory.StringViewHolder> adapter = RecyclerAdapterFactory.getInstance().createAdapter();
+        RecyclerView.Adapter<AdapterFactory.StringViewHolder> adapter = AdapterFactory.getInstance().createAdapter();
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         mRecyclerView.setAdapter(adapter);
     }
