@@ -24,6 +24,7 @@
         <activity android:name=".activity.CustomCollapsingToCenterActivity"/>
         <activity android:name=".activity.CustomSimpleBehaviorActivity"/>
         <activity android:name=".activity.CustomSimpleBehavior1Activity"/>
+        <activity android:name=".activity.SwipeRefreshActivity"/>
     </application>
 
 </manifest>

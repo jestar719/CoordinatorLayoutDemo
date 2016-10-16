@@ -1,6 +1,7 @@
 package cn.jestar.coodinatorlayoutdemo;
 
 import cn.jestar.coodinatorlayoutdemo.activity.BaseActivity;
+import cn.jestar.coodinatorlayoutdemo.activity.CustomCollapsingToCenterActivity;
 import cn.jestar.coodinatorlayoutdemo.activity.CustomSimpleBehavior1Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.CustomSimpleBehaviorActivity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample1Activity;
@@ -8,8 +9,8 @@ import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample1ExtActivity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample2Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample3Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample3Ext1Activity;
-import cn.jestar.coodinatorlayoutdemo.activity.CustomCollapsingToCenterActivity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample3ExtActivity;
+import cn.jestar.coodinatorlayoutdemo.activity.SwipeRefreshActivity;
 
 /**
  * 常量
@@ -25,7 +26,8 @@ public interface AppConfig {
             OfficialSample3Ext1Activity.class,
             CustomCollapsingToCenterActivity.class,
             CustomSimpleBehaviorActivity.class,
-            CustomSimpleBehavior1Activity.class
+            CustomSimpleBehavior1Activity.class,
+            SwipeRefreshActivity.class
     };
     int[] IMAGES = {R.drawable.meinu,R.drawable.meinu,R.drawable.meinu};
 }

@@ -20,6 +20,7 @@
         <item>自定义中间折叠</item>
         <item>自定义简单Behavior</item>
         <item>自定义简单Behavior1</item>
+        <item>SwipeRefreshLayout使用</item>
     </string-array>
     <string-array name="tab_item">
         <item>Tab1</item>
