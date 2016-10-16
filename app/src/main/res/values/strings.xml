@@ -6,10 +6,11 @@
     <string name="exit_unit_collapsed">exitUnitCollapsed</string>
     <string name="enter_unit_collapsed">enterAlwaysCollapsed</string>
     <string name="behavior_child">Behavior控制的View</string>
-    <string name="behavior_dependency">被观察的View</string>
+    <string name="behavior_dependency_a">被观察的View_A</string>
     <string name="custom_simple_behavior">.CustomSimpleBehavior</string>
     <string name="text_hint_search">搜索</string>
     <string name="i_am_image_roller">我是轮播图</string>
+    <string name="behavior_dependency_b">被观察的View_B</string>
     <string-array name="main_menu">
         <item>官方样例1</item>
         <item>官方样例1扩展</item>

@@ -15,10 +15,17 @@
         android:text="@string/behavior_child"
         />
     <Button
-        android:id="@+id/tv_dependency"
+        android:id="@+id/tv_dependency_a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_48"
-        android:text="@string/behavior_dependency"
+        android:text="@string/behavior_dependency_a"
+        />
+    <Button
+        android:id="@+id/tv_dependency_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_128"
+        android:text="@string/behavior_dependency_b"
         />
 </android.support.design.widget.CoordinatorLayout>
