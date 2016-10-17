@@ -50,7 +50,7 @@
 
 
 #### 相关知识点分析
-* [`NestedScrolling嵌套滑动机件分析`](NestedScrolling嵌套滑动机件分析.md)
+* [`NestedScrolling嵌套滑动机件分析`](doc/NestedScrolling嵌套滑动机件分析.md)
 * [`CoordinatorLayout相关分析`](doc/CoordinatorLayout分析.md)
 * [`Behavior分析`](doc/Behavior分析.md)
 * [`官方配套的View分析`](doc/官方配套的View分析.md)
