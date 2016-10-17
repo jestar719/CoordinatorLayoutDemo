@@ -32,6 +32,7 @@
 * 在`xml`中使用`app:scrolling_flags`来设置
 * 在组件类声明上使用注解`@Coordinator.DefaultBehavior(T.class)`来设置
 * 在代码中创建实例,设置到`Coodinator.LayoutParams`中
+
 ##### 五 有哪些配套的`View`和`Behavior`
 * `AppBarLayout`及其`AppBarLayout.Behavior`,其`ChildView`为`AppBarLayout`,`Dependency`为`View`
 * `CollapsingToolbarLayout`,配合`AppBarLayout`使用,生成折叠及视差模式
@@ -44,7 +45,7 @@
 通常使用得最多的是`AppbarLayout`和`CollapsingToolbarLayout`
 
 ##### 六 具体的使用方法
-[看Demo及对应的说明](doc/Demo案例说明)
+[看Demo及对应的说明](doc/Demo案例说明.md)
 
 
 
