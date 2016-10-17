@@ -44,7 +44,7 @@
 通常使用得最多的是`AppbarLayout`和`CollapsingToolbarLayout`
 
 ##### 六 具体的使用方法
-![看Demo及对应的说明](doc/Demo案例说明)
+[看Demo及对应的说明](doc/Demo案例说明)
 
 
 
