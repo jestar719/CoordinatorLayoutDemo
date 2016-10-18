@@ -3,20 +3,22 @@
 `AppBarLayout`和其`Behavior`的基础应用.演示了怎么通过`layout_scrollFlags`和`Behavior`在xml中的使用.
 基本结构如下
 
-``
+````
 <CoordinatorLayout>
     <AppBarLayout>
-    <View
-    ...
-    app:layout_scrollFlags="xxx"
-    />
-    <View
+
+        <View
         ...
-        app:layout_scrollFlags="xxx"
-        />
+        app:layout_scrollFlags="xxx"/>
+
+        <View
+            ...
+            app:layout_scrollFlags="xxx"/>
+
      </AppBarLayout>
+
 </CoordinatorLayout>
-``
+````
 在扩展中演示了不同的`layout_scrollFlags`组合的效果.
 
 使用说明
@@ -28,21 +30,24 @@
 * `layout_scrollFlags`只对AppBarLayout的直接子组件有效.
 * 使用`include`导入的组件,除非原布局文件中根节点中含有`layout_scrollFlags`,否则视为无此属性.在`include`上添加无效
 
-``
-<include layout="@layout:xxxxx" layout_scrollFlags="xxx"/>
-``
+````
+<include
+        layout="@layout:xxxxx"
+        app:layout_scrollFlags="xxx"/>
+````
 这样是无效的
 
 如果想使用`include`可以使用`Framlayout`等布局,设置`layout_scrollFlags`,然后包裹它.如
 
-    ``
-    <FramLayout
-    ...
-   layout_scrollFlags="xxx"
-    >
-        <include layout="@layout:xxxxx" />
-     </FramLayout>
-    ``
+````
+    <FrameLayout
+        ...
+        app:layout_scrollFlags="xxx"">
+
+        <include layout="@layout:xxxxx"/>
+
+     </FrameLayout>
+````
 
 ##### 官方样例2
 
