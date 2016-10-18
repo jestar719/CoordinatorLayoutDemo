@@ -24,53 +24,38 @@
         </FrameLayout>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_48"
+            style="@style/style_text"
             android:background="@color/colorPrimaryDark"
-            android:gravity="center_vertical"
             android:text="@string/ext1"
-            android:textColor="@android:color/white"
-            app:layout_scrollFlags="scroll|snap"
+            app:layout_scrollFlags="scroll|snap"/>
+
+        <TextView
+            style="@style/style_text"
+            android:text="@string/ext1_enter_always"
+            app:layout_scrollFlags="scroll|enterAlways"
             />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|enterAlways"
-            >
-
-            <include
-                layout="@layout/layout_tab_layout"
-                />
-        </FrameLayout>
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48"
-                android:gravity="center_vertical"
+                style="@style/style_text"
+                android:background="@color/colorPrimaryDark"
                 android:text="@string/not_direct_child"
-                android:textColor="@android:color/white"
                 app:layout_scrollFlags="scroll|enterAlways"
                 />
         </FrameLayout>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_48"
-            android:background="@color/colorPrimaryDark"
-            android:gravity="center_vertical"
+            style="@style/style_text"
             android:text="@string/between_not_scroll"
-            android:textColor="@android:color/white"
             app:layout_scrollFlags="scroll|enterAlways"
             />
 
         <include
             layout="@layout/layout_tab_layout"
-            app:layout_scrollFlags="scroll|enterAlways"
             />
     </android.support.design.widget.AppBarLayout>
 

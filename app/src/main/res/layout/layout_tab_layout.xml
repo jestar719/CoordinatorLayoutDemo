@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.TabLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/dp_48"
-    app:tabMode="fixed"
-    app:tabSelectedTextColor="@color/colorAccent"
-    app:tabIndicatorColor="@android:color/holo_red_light"
-    android:background="@color/colorPrimaryHardDark" >
+    style="@style/style_tab_layout"
+    >
+    <android.support.design.widget.TabItem
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Tab1"/>
 
     <android.support.design.widget.TabItem
-        android:text="Tab1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:text="Tab2"/>
 
     <android.support.design.widget.TabItem
-        android:text="Tab2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-    <android.support.design.widget.TabItem
-        android:text="Tab3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:text="Tab3"/>
 </android.support.design.widget.TabLayout>

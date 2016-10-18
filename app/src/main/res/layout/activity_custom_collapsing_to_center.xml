@@ -21,66 +21,22 @@
                 android:layout_marginTop="@dimen/dp_48"
                 android:orientation="vertical"
                 app:layout_collapseMode="parallax"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 >
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <include layout="@layout/layout_viewpager"/>
 
-                    <android.support.v4.view.ViewPager
-                        android:id="@+id/view_pager"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp_256"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/i_am_image_roller"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="@dimen/dp_16"
-                        android:layout_marginBottom="@dimen/dp_48"
-                        />
-                </RelativeLayout>
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp_48"
-                    android:background="@color/colorPrimary"
-                    android:drawableEnd="@android:drawable/ic_delete"
-                    android:drawablePadding="@dimen/dp_16"
-                    android:drawableStart="@android:drawable/ic_menu_search"
-                    android:hint="@string/text_hint_search"
-                    android:paddingBottom="@dimen/dp_16"
-                    android:paddingEnd="@dimen/dp_16"
-                    android:paddingStart="@dimen/dp_16"
-                    android:paddingTop="@dimen/dp_8"
-                    />
+                <include layout="@layout/layout_edit"/>
             </LinearLayout>
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="@dimen/dp_48"
-                app:layout_collapseMode="pin"
-                >
-
-                <include
-                    layout="@layout/layout_title"
-                    />
-            </FrameLayout>
+            <include
+                layout="@layout/layout_title_pin"
+                />
         </android.support.design.widget.CollapsingToolbarLayout>
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
-            app:tabIndicatorColor="@android:color/holo_red_light"
-            app:tabMode="fixed"
-            app:tabSelectedTextColor="@android:color/holo_red_light"
-            app:tabTextColor="@color/colorAccent"
-            />
+        <include layout="@layout/layout_tab"/>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/layout_recycler"/>
+    <include layout="@layout/layout_swipe_refresh"/>
 </android.support.design.widget.CoordinatorLayout>

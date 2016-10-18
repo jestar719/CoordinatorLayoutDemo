@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">CoodinatorLayoutDemo</string>
-    <string name="ext1">从上至下是不同的scroll模式组合.</string>
+    <string name="ext1">标题不带snap,我带snap.</string>
     <string name="not_direct_child">非AppBarLayout直接子View,scroll_flag无效</string>
-    <string name="between_not_scroll">夹在两个不滚动的组件之间,scroll_flag无效</string>
+    <string name="between_not_scroll"> 在无scrollFlags或scrollFlags无效的组件之下的所有组件,scroll_flag无效</string>
     <string name="exit_unit_collapsed">exitUnitCollapsed</string>
     <string name="enter_unit_collapsed">enterAlwaysCollapsed</string>
     <string name="behavior_child">Behavior控制的View</string>
@@ -11,6 +11,7 @@
     <string name="text_hint_search">搜索</string>
     <string name="i_am_image_roller">我是轮播图</string>
     <string name="behavior_dependency_b">被观察的View_B</string>
+    <string name="ext1_enter_always">enterAlways,只要下拉就显示</string>
     <string-array name="main_menu">
         <item>官方样例1</item>
         <item>官方样例1扩展</item>
@@ -18,10 +19,9 @@
         <item>官方样例3</item>
         <item>官方样例3扩展</item>
         <item>官方样例3扩展1</item>
-        <item>自定义中间折叠</item>
+        <item>自定义中间折叠带下拉刷新</item>
         <item>自定义简单Behavior</item>
         <item>自定义简单Behavior1</item>
-        <item>SwipeRefreshLayout使用</item>
     </string-array>
     <string-array name="tab_item">
         <item>Tab1</item>

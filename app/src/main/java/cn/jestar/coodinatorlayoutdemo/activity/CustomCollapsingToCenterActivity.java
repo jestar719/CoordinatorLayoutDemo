@@ -2,6 +2,7 @@ package cn.jestar.coodinatorlayoutdemo.activity;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.SwipeRefreshLayout;
 
 import butterknife.BindView;
 import cn.jestar.coodinatorlayoutdemo.AppConfig;
@@ -18,6 +19,8 @@ public class CustomCollapsingToCenterActivity extends BaseCustomTitleActivity{
     ViewPager mViewPager;
     @BindView(R.id.tab_layout)
     TabLayout mTabLayout;
+    @BindView(R.id.swipe_refresh)
+    SwipeRefreshLayout mSwipeRefreshLayout;
     @Override
     protected void init() {
        initRecyclerView();
@@ -31,6 +34,12 @@ public class CustomCollapsingToCenterActivity extends BaseCustomTitleActivity{
         }
         mViewPager.setAdapter(AdapterFactory.getInstance().createPageAdapter(AppConfig.IMAGES,stringArray));
         mTabLayout.setupWithViewPager(mViewPager,true);
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                mSwipeRefreshLayout.setRefreshing(false);
+            }
+        });
     }
 
     @Override

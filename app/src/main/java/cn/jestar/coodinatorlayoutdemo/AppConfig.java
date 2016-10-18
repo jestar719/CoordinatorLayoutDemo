@@ -10,7 +10,6 @@ import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample2Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample3Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample3Ext1Activity;
 import cn.jestar.coodinatorlayoutdemo.activity.OfficialSample3ExtActivity;
-import cn.jestar.coodinatorlayoutdemo.activity.SwipeRefreshActivity;
 
 /**
  * 常量
@@ -27,7 +26,6 @@ public interface AppConfig {
             CustomCollapsingToCenterActivity.class,
             CustomSimpleBehaviorActivity.class,
             CustomSimpleBehavior1Activity.class,
-            SwipeRefreshActivity.class
     };
     int[] IMAGES = {R.drawable.meinu,R.drawable.meinu,R.drawable.meinu};
 }

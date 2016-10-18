@@ -11,4 +11,25 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="style_tab_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="tabIndicatorColor">@android:color/holo_orange_light</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabSelectedTextColor">@android:color/holo_orange_light</item>
+        <item name="tabTextColor">@color/colorAccent</item>
+    </style>
+
+    <style name="style_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_48</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingStart">@dimen/dp_16</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="sp_14">14sp</dimen>
 </resources>

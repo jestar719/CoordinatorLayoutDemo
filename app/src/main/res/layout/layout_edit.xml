@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48"
+    android:background="@color/colorPrimary"
+    android:drawableEnd="@android:drawable/ic_delete"
+    android:drawablePadding="@dimen/dp_16"
+    android:drawableStart="@android:drawable/ic_menu_search"
+    android:hint="@string/text_hint_search"
+    android:textSize="@dimen/sp_12"
+    android:textColor="@color/colorAccent"
+    android:textColorHint="@color/colorAccent"
+    android:padding="@dimen/dp_16"
+    tools:showIn="@layout/activity_custom_collapsing_to_center"/>
