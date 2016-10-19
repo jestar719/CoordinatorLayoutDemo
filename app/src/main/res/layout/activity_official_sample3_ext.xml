@@ -13,21 +13,77 @@
             android:id="@+id/collapsing_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:collapsedTitleTextAppearance="@color/colorAccent"
-            app:contentScrim="?attr/colorPrimary"
-            app:titleEnabled="false"
-            app:expandedTitleGravity="center_horizontal|top"
+            android:minHeight="@dimen/dp_48"
+            app:collapsedTitleGravity="center"
+            app:expandedTitleGravity="center"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false"
             >
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_256"
-                android:scaleType="centerCrop"
-                android:src="@drawable/meinu"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
                 app:layout_collapseMode="parallax"
-                app:layout_collapseParallaxMultiplier="0.2"
-                />
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_256"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/meinu"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_titleEnable"
+                        style="@style/style_official3Ext_text"
+                        android:text="@string/titleEnable"/>
+
+                    <ToggleButton
+                        android:id="@+id/tb_titleEnable"
+                        style="@style/style_official3Ext_toggle"/>
+
+                    <TextView
+                        android:id="@+id/tv_contentScrim"
+                        style="@style/style_official3Ext_text"
+                        android:layout_below="@+id/tv_titleEnable"
+                        android:text="@string/contentScrim"/>
+
+                    <ToggleButton
+                        android:id="@+id/tb_contentScrim"
+                        style="@style/style_official3Ext_toggle"
+                        android:layout_below="@+id/tb_titleEnable"/>
+
+                    <TextView
+                        android:id="@+id/tv_collapseParallaxMultiplier"
+                        style="@style/style_official3Ext_text"
+                        android:layout_below="@+id/tv_contentScrim"
+                        android:text="@string/collapseParallaxMultiplier"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_collapseParallaxMultiplier_num"
+                        style="@style/style_official3Ext_toggle"
+                        android:layout_below="@+id/tb_contentScrim"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center"
+                        android:text="@string/parallaxMultiplierNum"
+                        />
+
+                    <android.support.v7.widget.AppCompatSeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_below="@+id/tv_collapseParallaxMultiplier"
+                        android:max="100"
+                        android:progress="50"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/tool_bar"

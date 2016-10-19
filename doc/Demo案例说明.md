@@ -1,5 +1,5 @@
 ### Demo说明
-##### 官方样例1及扩展
+#### 官方样例1及扩展
 `AppBarLayout`和其`Behavior`的基础应用.演示了怎么通过`layout_scrollFlags`和`Behavior`在xml中的使用.
 基本结构如下
 
@@ -49,15 +49,23 @@
      </FrameLayout>
 ````
 
-##### 官方样例2
+#### 官方样例2及扩展
 
 演示了`CollapsingToolbarLayout`的基本使用.
-新出现了`layout_scrollFlags`的新属性`exitUntiCollapsed`,`enterAlwaysCollapsed`及`app:layout_collapseMode`的配合效果
-当折叠时,`layout_collapseMode`开始起作用.这里使用的是`pin`表示固定不动.
-* `exitUntilCollapsed`拉的时候，这个View会跟着滑动直到折叠。
-* `enterAlwaysCollapsed`另一种enterAlways，但是只显示折叠后的高度。配合`minHeight`使用
-##### 官方样例3
+及`layout_scrollFlags`的属性`exitUntiCollapsed`,`enterAlwaysCollapsed`及`app:layout_collapseMode`的配合效果
+* `layout_scrollFlags`中配合折叠效果的属性
+    * `exitUntilCollapsed` 向上滑动时,View会向上滑动并折叠.此时`pin`属性才能产生效果,从下向上折叠到含有`pin`属性的子组件为止.
+                                        当依赖的组件向下滑动并且已经滑动到顶时,View会向下展开.
+    * `enterAlwaysCollapsed` 单独使用时等同与`enterAlways`,`layout_collapseMode`属性不起作用.
+                                            与`enterAlways`一起配合使用时,只要向下滑动就会展开`minHeight`部分.
+                                            当依赖的组件向下滑动并且已经滑动到顶时,View会向下展开.
+                                            推荐使用`scroll|enterAlways|enterAlwaysCollapsed|snap`
 
-演示了在`CollapsingToolbarLayout`下的视差效果.
-新出现了`app:layout_collapseMode="parallax"`属性就是开启视差.
-`app:layout_collapseParallaxMultiplier="0.5"`是配合使用的,作用是设置开启视差切换的比例.这里0.5表示折叠到一半时开启切换
+`layout_collapseMode`开始的作用.
+    *   `pin`表示固定不动,只在`exitUntilCollapsed`时有效
+    *   `parallax`表示开启视差效果(折叠速度比滑动速度慢)
+        *    `app:layout_collapseParallaxMultiplier`是配合视差效果使用的,作用是设置视差的比例.默认是0.5.数值越大视差越大
+在`CollapsingToolbarLayout`中有几个属性是配合`Toolbar`的
+* ` app:contentScrim` 设置当折叠时`Toolbar`的背景,如果没有这个属性,则会显示视差的背景
+* `app:titleEnabled` 设置标题是否根随滑动而变化,默认是开启的
+

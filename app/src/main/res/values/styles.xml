@@ -30,6 +30,17 @@
         <item name="android:textSize">@dimen/sp_14</item>
     </style>
 
-    <dimen name="dp_40">40dp</dimen>
-    <dimen name="sp_14">14sp</dimen>
+    <style name="style_official3Ext_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/dp_16</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="style_official3Ext_toggle">
+        <item name="android:layout_width">@dimen/dp_128</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
 </resources>
