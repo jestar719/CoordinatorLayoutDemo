@@ -23,6 +23,8 @@
     <string name="statusBarScrim">app:statusBarScrim</string>
     <string name="collapseParallaxMultiplier">app:layout_collapseParallaxMultiplier</string>
     <string name="parallaxMultiplierNum">0.5</string>
+    <string name="show_bottom_sheet">显示/隐藏底部菜单</string>
+    <string name="show_bottom_sheet_dialog">显示底部菜单弹窗</string>
     <!---->
     <string-array name="tab_item">
         <item>Tab1</item>
@@ -33,10 +35,10 @@
         <item>官方样例1</item>
         <item>官方样例1扩展</item>
         <item>官方样例2</item>
-        <item>官方样例3</item>
-        <item>官方样例3扩展</item>
-        <item>官方样例3扩展1</item>
+        <item>官方样例2扩展</item>
+        <item>官方样例2扩展1</item>
         <item>自定义中间折叠带下拉刷新</item>
+        <item>BottomSheet样例</item>
         <item>自定义简单Behavior</item>
         <item>自定义简单Behavior1</item>
     </string-array>
