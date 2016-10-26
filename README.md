@@ -17,21 +17,24 @@
 ### 新手上路
 #### 一 `CoordinatorLayout`干什么用的
 用来通过`Behavior`谐调两个子组件之间的互动改变.比如滑动,缩放.等等.目前官方推出的配套的其它组件主要集中在滑动互动上.
+
+其核心功能就是拦截事件,寻找对应的`Behavior`,让`Behavior`处理事件
 #### 二 怎么做到的
 一个重要的新角色`Behavior`出场,由Behavior代理子组件的相关事件,比如`onMeasure,onLayout,onTouchEvent`等
 
-`CoordinatorLayout`做为一个桥梁,来配对相关联的两个子组件,设置到对应的`Behavior`里.
-
-在触摸事件中拦截触摸事件,根据被触摸的子组件寻找处理该事件的`Behavior`,调用其相关方法处理此事件.
+在触摸事件中`CoordinatorLayout`拦截触摸事件,根据被触摸的子组件寻找处理该事件的`Behavior`,调用其相关方法处理此事件.
 
 #### 三 怎么配对的
-`Behavior`是一种基与观察者模式的控制器.其中被观察的`View`叫`DependencyView`,配对的`View`叫`ChildView`.
+`Behavior`的运行是基与代理模式.其代理的组件称为`ChildView`
 
 `Behavior`是承继自`CoordinatorLayout.Behaviro<T extends View>`.其中的泛型用来确定`ChildView`的类型.
 
+在触摸事件中,`CoordinatorLayout`会遍历直接子组件.寻找带有能处理触摸事件的`Behavior`,带有`Behavior`的子组件就是其`ChildView`
+
+另外`Behavior`还是一种基与观察者模式的控制器.其中被观察的`View`叫`DependencyView`,配对的`View`叫`ChildView`.
+
 `Behavior`中`layoutDependsOn`方法用来判断一个`View`是否为`DependencyView`
 
-`CoordinatorLayout`在每轮触摸事件或子组件发生改变时,获取该子组件的`Behavior`,遍历子组件,寻找对应的`ChildView`并完成配对
 #### 四 Behavior是怎么设置的
 `Behavior`是存放在`CoordinatorLayout.LayoutParams`里的.`CoordinatorLayout`的直接子组件的`LayoutParams`都是.
 

@@ -15,6 +15,6 @@ public class OfficialSample3Activity extends BaseToolbarActivity{
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_official_sample3;
+        return R.layout.activity_official_sample2;
     }
 }

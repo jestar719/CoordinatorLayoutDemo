@@ -14,4 +14,5 @@
     <dimen name="dp_256">256dp</dimen>
     <dimen name="sp_12">12sp</dimen>
     <dimen name="sp_14">14sp</dimen>
+    <dimen name="dp_96">96dp</dimen>
 </resources>

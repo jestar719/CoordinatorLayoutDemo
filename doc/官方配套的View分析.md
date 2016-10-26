@@ -1,13 +1,17 @@
 #### `AppBarLayout`的作用及原理
 `AppBarLayout`是`LinearLayout`的子类,方向强制为`vertical`
 
-`AppBarLayout.Behavior`是`AppBarLayout`的内部类.
+`AppBarLayout.Behavior`是`AppBarLayout`的内部类.继承自`HeaderBehavior`,所以它是控制`AppBarLayout`可以向上滑动的.因此在布局中`AppBarLayout`必须是`Coordinator`的第一子组件.
+
+`AppBarLayout.Behavior`自动拦截所有的上下滑动事件,控制对应的`AppBarLayout`
 
 在`AppBarLayout`的声明上使用注解标注了`@CoordinatorLayout.DefaultBehavior(AppBarLayout.Behavior.class)`
 
-对应的是在`xml`中可滑动组件上的`app:layout_behavior="@string/appbar_scrolling_view_behavior"`属性
+这样在创建`AppBarLayout`时,在`LayoutParams`里会包含`AppBarBehavior`
 
-对标注了`@string/appbar_scrolling_view_behavior`组件的滑动进行响应,控制其标了`app:layout_scrollFlags="scroll"`的直接子类进行嵌套滑动.
+可以说只要在`CoordinatorLayout`中第一个子组件是`AppBarLayout`,那么其就会自动生效.控制其标了`app:layout_scrollFlags="scroll"`的直接子类进行嵌套滑动.不需要在其它组件上设置`app:layout_behavior`
+
+在`xml`中其它组件上的`app:layout_behavior="@string/appbar_scrolling_view_behavior"`属性的作用就是定位.
 
 #### `AppBarLayout`的使用及细节
 * 只能控制直接子类进行嵌套滑动

@@ -50,7 +50,6 @@
 ````
 
 #### 官方样例2及扩展
-
 演示了`CollapsingToolbarLayout`的基本使用.
 及`layout_scrollFlags`的属性`exitUntiCollapsed`,`enterAlwaysCollapsed`及`app:layout_collapseMode`的配合效果
 * `layout_scrollFlags`中配合折叠效果的属性
@@ -68,4 +67,12 @@
 在`CollapsingToolbarLayout`中有几个属性是配合`Toolbar`的
 * ` app:contentScrim` 设置当折叠时`Toolbar`的背景,如果没有这个属性,则会显示视差的背景
 * `app:titleEnabled` 设置标题是否根随滑动而变化,默认是开启的
+
+在扩展中演示了各种属性的用法.
+
+在扩展一中演示了`CollapsingToobarlayout`中的布局定位.因为其是继承与`FrameLayout`的.所以其子组件可以使用`Framlayout`的定位属性`layout_gravity`
+
+
+
+
 
