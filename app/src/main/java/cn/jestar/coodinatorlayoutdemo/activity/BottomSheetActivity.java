@@ -3,11 +3,15 @@ package cn.jestar.coodinatorlayoutdemo.activity;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.jestar.coodinatorlayoutdemo.R;
+import cn.jestar.coodinatorlayoutdemo.view.AdapterFactory;
 
 /**
  * 用与演示BottomSheet和BottomSheetDialog的页面
@@ -18,6 +22,8 @@ public class BottomSheetActivity extends BaseCustomTitleActivity {
     View mBottomSheetView;
     @BindView(R.id.swipe_refresh)
     SwipeRefreshLayout mRefreshLayout;
+    @BindView(R.id.bottom_recycler)
+    RecyclerView mBottomRecycler;
     private BottomSheetBehavior<View> mBehavior;
     private BottomSheetDialog mBottomSheetDialog;
 
@@ -33,6 +39,13 @@ public class BottomSheetActivity extends BaseCustomTitleActivity {
                 mRefreshLayout.setRefreshing(false);
             }
         });
+        initBottomRecycler();
+    }
+
+    private void initBottomRecycler() {
+        RecyclerView.Adapter<AdapterFactory.StringViewHolder> adapter = AdapterFactory.getInstance().createAdapter();
+        mBottomRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        mBottomRecycler.setAdapter(adapter);
     }
 
     @OnClick(R.id.btn_bottomSheet)
@@ -46,7 +59,8 @@ public class BottomSheetActivity extends BaseCustomTitleActivity {
     public void onShowBottomSheetDialog() {
         if (mBottomSheetDialog == null) {
             mBottomSheetDialog = new BottomSheetDialog(this);
-            mBottomSheetDialog.setContentView(R.layout.layout_bottom_sheet);
+            View view = LayoutInflater.from(this).inflate(R.layout.layout_bottom_sheet, null);
+            mBottomSheetDialog.setContentView(view);
         }
         mBottomSheetDialog.show();
     }

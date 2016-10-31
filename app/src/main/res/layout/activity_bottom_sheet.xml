@@ -31,13 +31,18 @@
 
     <include layout="@layout/layout_swipe_refresh"/>
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/bottomSheetContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorAccent"
         app:layout_behavior="@string/bottom_sheet_behavior"
         >
-
-        <include layout="@layout/layout_bottom_sheet"/>
-    </FrameLayout>
+        <include layout="@layout/layout_tab_layout"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/bottom_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_256"/>
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
